@@ -55,6 +55,9 @@ let Antonietta= {
   name: "Antonietta",
   email: "adaine5@samsung.com",
   gender: "F",
+  multiplyNums: function(a, b) {
+    return a * b;
+  }
 }
 
 
@@ -76,7 +79,7 @@ console.log(Kennan.id);
 console.log(Keven.email);
 console.log(Gannie.name);
 console.log(Antonietta.gender);
-// console.log(Kennan.speak());
+
 
 
 // ==== Challenge 3: Object Methods ==== 
