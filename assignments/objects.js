@@ -31,6 +31,9 @@ let Kennan = {
   name: "Kennan",
   email: "kdiben1@tinypic.com",
   gender: "M",
+  speak: function() {
+    return "Hello, my name is Kennan!";
+  }
 }
 
 let Keven = {
@@ -73,6 +76,7 @@ console.log(Kennan.id);
 console.log(Keven.email);
 console.log(Gannie.name);
 console.log(Antonietta.gender);
+// console.log(Kennan.speak());
 
 
 // ==== Challenge 3: Object Methods ==== 
