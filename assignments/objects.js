@@ -31,9 +31,6 @@ let Kennan = {
   name: "Kennan",
   email: "kdiben1@tinypic.com",
   gender: "M",
-  speak: function() {
-    return "Hello, my name is Kennan!";
-  }
 }
 
 let Keven = {
@@ -55,9 +52,6 @@ let Antonietta= {
   name: "Antonietta",
   email: "adaine5@samsung.com",
   gender: "F",
-  multiplyNums: function(a, b) {
-    return a * b;
-  }
 }
 
 
@@ -84,10 +78,16 @@ console.log(Antonietta.gender);
 
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
-// console.log(kennan.speak());
+Kennan.speak = function() {
+  return "Hello, my name is Kennan!";
+}
+console.log(Kennan.speak());
 
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
-//console.log(antonietta.multiplyNums(3,4));
+Antonietta.multiplyNums = function(a, b) {
+  return a * b;
+}
+console.log(Antonietta.multiplyNums(3,4));
 
 // === Great work! === Head over to the the arrays.js. You may come back and attempt the Stretch Challenge once you have completed the challenges in arrays.js and function-conversion.js.
 
@@ -98,16 +98,28 @@ console.log(Antonietta.gender);
 // 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
-const parent = {}
+const parent = {
+  name: "Susan",
+  age: 70,
+  child: {
+    name: "George",
+    age: 50,
+    grandchild: {
+      name: "Sam",
+      age: 30
+    }
+  }
+}
 
 // Log the parent object's name
-
+console.log(parent.name);
 // Log the child's age
-
+console.log(parent.child.age);
 // Log the name and age of the grandchild
-
+console.log(parent.child.grandchild);
 // Have the parent speak
-
+let nestedSpeak = () => { return `My name is ${this.name}` };
+console.log(parent.speak);
 // Have the child speak
 
 // Have the grandchild speak
